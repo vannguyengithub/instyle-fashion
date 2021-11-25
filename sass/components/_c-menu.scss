@@ -27,14 +27,57 @@
                 z-index: 11;
             }
         }
+        @include tb{
+            flex-direction: column;
+            width: 100%;
+            text-align: left;
+            opacity: 0;
+            background-color: white;
+            align-items: stretch;
+            position: fixed;
+            top: 76px;
+            justify-content: flex-start;
+            left: 0;
+            right: 0;
+            bottom: 0px;
+            box-shadow: 0px 5px 18px -5px #000;
+
+            &.is_active{
+                opacity: 1;
+                z-index: 11;
+            }
+        }
+
         @include sp {
             &:before {
                 content: "";
-                border: 20px solid;
-                border-color: transparent transparent #fff transparent;
                 position: absolute;
-                top: -40px;
-                left: 2.5rem;
+                top: -18px;
+                left: 2.4rem;
+                z-index: 100;
+                width: 0;
+                height: 0;
+                border: 0 solid #333;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-bottom: 20px solid #fff;
+                box-sizing: border-box;
+            }
+        }
+        @include tb {
+            &:before {
+                content: "";
+                position: absolute;
+                top: -18px;
+                left: 2.4rem;
+                z-index: 100;
+                width: 0;
+                height: 0;
+                border: 0 solid #333;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-bottom: 20px solid #fff;
+                box-sizing: border-box;
             }
         }
 
@@ -49,8 +92,16 @@
             line-height: 6rem;
             &:last-of-type {
                 border-bottom: none;
-               }
-
+            }
+        }
+        @include tb{
+            border-bottom: 0.1px solid #999;
+            display: flex;
+            justify-content: space-between;
+            line-height: 6rem;
+            &:last-of-type {
+                border-bottom: none;
+            }
         }
         
     } 
