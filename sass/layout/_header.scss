@@ -1,0 +1,80 @@
+.c-header {
+    padding: 3.4rem 3.8rem;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        font-size: 3rem;
+    }
+    &__box {
+        width: 80%;
+        @include sp {
+            display: flex;
+            align-items: center;
+           
+        }
+    }
+    &__logo {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        @include sp {
+            font-size: 4rem;
+            display: flex;
+            justify-content: center;
+            width: calc(100% - 16px);
+            position: static;
+            top: unset;
+            left: unset;
+        }
+    }
+    &__icon {
+        width: 20%;
+    }
+    &__iconlist {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+    }
+    &__iconitem {
+
+        &--search {
+            text-decoration: none;
+            color: #000;
+            @include sp {
+                display: none;
+            }
+        }
+        &--user {
+            text-decoration: none;
+            color: #000;
+        }
+        &--cart {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+}
+.gg-menu{
+	box-sizing: border-box;
+	position: relative;
+	display: none;
+	transform: scale(var(--ggs, 1));
+	width: 16px;
+	height: 16px;
+    @include sp {
+        display: block;
+    }
+  
+	&::before {
+	  content: "";
+	  display: block;
+	  box-sizing: border-box;
+	  position: absolute;
+	  width: 4px;
+	  height: 4px;
+	  background: currentColor;
+	  box-shadow: 0 6px 0, 6px 6px 0, 12px 6px 0, 6px 12px 0, 12px 12px 0, 6px 0 0, 12px 0 0, 0 12px 0;
+	}
+  }

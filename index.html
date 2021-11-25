@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instyle fashion - Instyle Fashion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/slick.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head> 
+<body>
+    <div class="app">
+        <header class="header"> 
+            <div class="c-header">
+                <div class="c-header__list">
+                    <div class="c-header__box">
+                        <div class="m-menu d-onlysp" id="btn_menu">
+                            <i class="gg-menu"></i>
+                        </div> 
+                        <h1 class="c-header__logo">Instyle Fashion</h1>
+                    </div>
+                    <div class="c-header__icon">
+                        <ul class="c-header__iconlist">
+                            <li class="c-header__iconitem">
+                                <a class="c-header__iconitem--search fas fa-search" href=""></a>
+                            </li>
+                            <li class="c-header__iconitem">
+                                <a class="c-header__iconitem--user far fa-user" href=""></a>
+                            </li>
+                            <li class="c-header__iconitem">
+                                <a class="c-header__iconitem--cart fas fa-shopping-cart" href=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>  
+            </div>
+            <!--  -->
+            <div class="c-menu">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="l-12">
+                            <ul class="c-menu__list" id="toggle_menu">
+                                <li class="c-menu__item">    
+                                    <a class="c-menu__link" href="">Trang chủ</a>
+                                    <i class="c-menu__icon c-menu__icon--dow fas fa-chevron-down"></i>
+                                    <i class="c-menu__icon c-menu__icon--up fas fa-chevron-up"></i>
+                                    <ul class="c-menu__submenu-list">
+                                        <li class="c-menu__submenu-item" >
+                                            <a href="#">kiểu hiển thị header 1</a>
+                                        </li>
+                                        <li class="c-menu__submenu-item" >
+                                            <a href="#">kiểu hiển thị header 1</a>
+                                        </li>
+                                        <li class="c-menu__submenu-item" >
+                                            <a href="#">kiểu hiển thị header 1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="c-menu__item">    
+                                    <a class="c-menu__link" href="">Sản phẩm</a>
+                                    <i class="c-menu__icon fas fa-chevron-down"></i>
+                                </li>
+                                <li class="c-menu__item">    
+                                    <a class="c-menu__link" href="">Product view</a>
+                                    <i class="c-menu__icon fas fa-chevron-down"></i>
+                                </li>
+                                <li class="c-menu__item">    
+                                    <a class="c-menu__link" href="">Blog</a>
+                                </li>
+                                <li class="c-menu__item">    
+                                    <a class="c-menu__link" href="">Giới thiệu</a>
+                                </li>
+                                <li class="c-menu__item">    
+                                    <a class="c-menu__link" href="">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="grid">
+            <div class="slick">
+                <div>
+                    <img src="./assets/img/slideshow_1.webp" alt="">
+                </div>
+                <div>
+                    <img src="./assets/img/slideshow_2.jpg" alt="">
+                </div>
+              </div>
+            </div>
+        </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script>
+       $('.slick').slick({
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        dots: true,
+    });
+
+    
+    document.addEventListener('DOMContentLoaded', () => {
+	var element = document.getElementById('toggle_menu');
+	var trigger = document.getElementById('btn_menu');
+    if(trigger)
+        {
+        trigger.addEventListener('click', () => {
+        element.classList.toggle('is_active');
+        });
+    }
+});
+    </script>    
+</body>
+</html>

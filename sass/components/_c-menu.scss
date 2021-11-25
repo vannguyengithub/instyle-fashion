@@ -1,0 +1,114 @@
+.c-menu {
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        padding: 2rem 0 0 0;
+        transition: all 0.5;
+        @include sp{
+            flex-direction: column;
+            width: 100%;
+            text-align: left;
+            opacity: 0;
+            background-color: white;
+            align-items: stretch;
+            position: fixed;
+            justify-content: flex-start;
+
+            &.is_active{
+                opacity: 1;
+                z-index: 11;
+            }
+        }
+        @include sp {
+            &:before {
+                content: "";
+                border: 20px solid;
+                border-color: transparent transparent #fff transparent;
+                position: absolute;
+                top: -40px;
+                left: 2.5rem;
+            }
+        }
+
+    }
+    &__item {
+        margin: 0 4rem;
+        position: relative;
+        @include sp{
+            border-bottom: 0.1px solid #999;
+            display: flex;
+            justify-content: space-between;
+            line-height: 6rem;
+            &:last-of-type {
+                border-bottom: none;
+               }
+
+        }
+        
+    } 
+    &__link {
+        text-decoration: none;
+        color: $color-text;
+        font-size: 2.6rem;
+        font-weight: 200;
+    }
+    &__icon {
+        font-size: 1.8rem;
+        padding: 1rem;
+        
+        &--up {
+            display: none;
+        }
+    }
+
+    &__submenu-list {
+        position: absolute;
+        top: 6.5rem;
+        left: 0;
+        min-width: 23rem;
+        list-style: none;
+        font-size: 2rem;
+        display: block;
+        background-color: $color-white;
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, .20%) ;
+        text-align: center;
+        display: none;
+        animation-name: moveTopMenu;
+        animation-duration: .4s;
+        z-index: 10;
+
+        &::before {
+            left: 0rem;
+            content: '';
+            position: absolute;
+            top: -4rem;
+            height: 32px;
+            width: 23rem;
+        }
+    }
+    
+    &__submenu-item {
+        width: 100%;
+        display: block;
+        height: 100%;
+        line-height: 4.8rem;
+        border-bottom: 1px solid #6666662e;
+
+        &:nth-child(:last-child) {
+            border-bottom: none;
+        }
+        a{
+            text-decoration: none;
+            color: $color-text;
+        }
+        &:hover a {
+            color: $color-primary;
+        }
+    }
+    &__item:hover &__submenu-list {
+        display: block;
+    }
+}

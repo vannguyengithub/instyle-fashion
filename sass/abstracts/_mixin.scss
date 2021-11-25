@@ -1,0 +1,30 @@
+// dùng chung
+@mixin max($point) {
+    @media screen and (max-width: $point) {
+        @content;
+    }
+}
+@mixin min($point) {
+    @media screen and (min-width: $point) {
+        @content;
+    }
+}
+@mixin sp {
+	@media screen and (max-width: #{$breaksp}) {
+		@content;
+	}
+}
+@mixin pc {
+	@media screen and (min-width: #{$breaksp}) {
+		@content;
+	}
+}
+@mixin tb {
+	@media (min-width: #{$breaksp}) and (max-width: #{$desktop-width - 1px}) {
+	  @content;
+	}
+  }
+@mixin flex {
+	display: flex;
+	flex-wrap: wrap;
+}
