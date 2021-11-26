@@ -821,6 +821,72 @@ body {
   color: #666666; }
   .s-product__price--new {
     margin-right: 2rem;
-    color: red; }
+    color: #f94c43; }
   .s-product__price--old {
     text-decoration: line-through; }
+
+.s-banner {
+  background-image: url(../../assets/img/background_banner.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 16rem 5rem;
+  height: 54rem; }
+  @media screen and (max-width: 767px) {
+    .s-banner {
+      padding: 6rem 5rem; } }
+  @media (min-width: 767px) and (max-width: 1023px) {
+    .s-banner {
+      padding: 10rem 5rem; } }
+  .s-banner__box {
+    width: 45%;
+    float: right;
+    text-align: center; }
+    @media (min-width: 767px) and (max-width: 1023px) {
+      .s-banner__box {
+        width: 75%; } }
+    @media screen and (max-width: 767px) {
+      .s-banner__box {
+        width: 100%; } }
+  .s-banner__title {
+    font-size: 5rem;
+    font-weight: 600;
+    color: #000000;
+    line-height: 1.2;
+    position: relative; }
+    @media screen and (max-width: 767px) {
+      .s-banner__title {
+        font-size: 4rem; } }
+    .s-banner__title::after {
+      content: '';
+      height: 2px;
+      width: 120px;
+      background: #999999; }
+  .s-banner__description {
+    font-size: 4rem;
+    line-height: 1.4;
+    font-weight: 100;
+    color: #666;
+    letter-spacing: 1px;
+    padding: 2rem 0; }
+    @media screen and (max-width: 767px) {
+      .s-banner__description {
+        font-size: 3rem; } }
+  .s-banner__btn {
+    display: block;
+    background: none;
+    border: 1px solid #000;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    margin: 0;
+    padding: 8px 11px;
+    text-transform: uppercase;
+    width: 20rem;
+    font-size: 2rem;
+    margin: 0 auto;
+    position: relative; }
+    .s-banner__btn a {
+      text-decoration: none;
+      color: #666; }
