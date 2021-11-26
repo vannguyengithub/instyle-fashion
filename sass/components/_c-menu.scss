@@ -7,11 +7,13 @@
         list-style: none;
         padding: 2rem 0 3rem 0;
         transition: all 0.5;
+        
         @include sp{
             flex-direction: column;
             width: 100%;
             text-align: left;
-            opacity: 0;
+            // opacity: 0;
+            display: none;
             background-color: white;
             align-items: stretch;
             position: fixed;
@@ -25,13 +27,15 @@
             &.is_active{
                 opacity: 1;
                 z-index: 11;
+                display: block;
             }
         }
         @include tb{
             flex-direction: column;
             width: 100%;
             text-align: left;
-            opacity: 0;
+            // opacity: 0;
+            display: none;
             background-color: white;
             align-items: stretch;
             position: fixed;
@@ -45,6 +49,7 @@
             &.is_active{
                 opacity: 1;
                 z-index: 11;
+                display: block;
             }
         }
 
