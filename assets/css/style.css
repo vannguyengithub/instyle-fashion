@@ -834,7 +834,8 @@ body {
   height: 54rem; }
   @media screen and (max-width: 767px) {
     .s-banner {
-      padding: 6rem 5rem; } }
+      padding: 6rem 5rem;
+      background-position: inherit; } }
   @media (min-width: 767px) and (max-width: 1023px) {
     .s-banner {
       padding: 10rem 5rem; } }
