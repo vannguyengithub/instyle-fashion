@@ -1,0 +1,60 @@
+.s-product {
+
+    &__col {
+        
+    }
+    &__switch {
+        text-decoration: none;
+        display: block;
+        position: relative;
+
+        & img {
+            width: 100%;
+
+            &:last-of-type {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 1;
+                transition: opacity 0.5s ease-in-out;
+                -moz-transition: opacity 0.5s ease-in-out;
+                -webkit-transition: opacity 0.5s ease-in-out;
+            }
+            
+        }
+
+        &:hover img:last-of-type {
+            opacity: 0;
+        }
+    }
+
+    &__box {
+        padding: 3rem 0;
+    }
+    &__name {
+        font-size: 3rem;
+        font-weight: 100;
+        cursor: pointer;
+        
+        a{
+            text-decoration: none;
+            color: $color-black;
+        }
+    }
+    
+    &__price {
+        display: flex;
+        padding: 2rem 0;
+        font-size: 2.2rem;
+        font-weight: 100;
+        color: #666666;
+
+        &--new {
+            margin-right: 2rem;
+            color: red;
+        }
+        &--old {
+            text-decoration: line-through;
+        }
+    }
+}

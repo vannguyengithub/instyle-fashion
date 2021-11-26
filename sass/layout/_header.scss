@@ -21,6 +21,8 @@
         position: relative;
         top: 50%;
         left: 50%;
+        width: 50rem;
+        
         @include sp {
             font-size: 4rem;
             display: flex;

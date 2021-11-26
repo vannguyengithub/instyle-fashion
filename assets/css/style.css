@@ -415,7 +415,7 @@ body {
   align-items: center;
   justify-content: center;
   list-style: none;
-  padding: 2rem 0 0 0;
+  padding: 2rem 0 3rem 0;
   transition: all 0.5; }
   @media screen and (max-width: 767px) {
     .c-menu__list {
@@ -529,6 +529,28 @@ body {
   animation-name: moveTopMenu;
   animation-duration: .4s;
   z-index: 10; }
+  @media screen and (max-width: 767px) {
+    .c-menu__submenu-list {
+      position: fixed;
+      top: 11rem;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-align: left;
+      padding: 2rem 3.8rem; }
+      .c-menu__submenu-list .c-menu__submenu-item {
+        height: unset; } }
+  @media (min-width: 767px) and (max-width: 1023px) {
+    .c-menu__submenu-list {
+      position: fixed;
+      top: 11rem;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-align: left;
+      padding: 2rem 3.8rem; }
+      .c-menu__submenu-list .c-menu__submenu-item {
+        height: unset; } }
   .c-menu__submenu-list::before {
     left: 0rem;
     content: '';
@@ -570,7 +592,6 @@ body {
   overflow: hidden;
   border: 0;
   border-radius: 50%;
-  margin: 0 45px;
   text-indent: -9999px;
   background-color: #ffff;
   background-position: center;
@@ -584,13 +605,15 @@ body {
   [type="button"].slick-next {
     right: 0;
     background-image: url(../../assets/img/prev.svg);
-    background-size: 15px; }
+    background-size: 15px;
+    margin: 0 5rem; }
     [type="button"].slick-next:hover {
       right: -5px; }
   [type="button"].slick-prev {
     left: 0;
     background-image: url(../../assets/img/next.svg);
-    background-size: 15px; }
+    background-size: 15px;
+    margin: 0 5rem; }
     [type="button"].slick-prev:hover {
       left: -5px; }
 
@@ -638,7 +661,8 @@ body {
   .c-header__logo {
     position: relative;
     top: 50%;
-    left: 50%; }
+    left: 50%;
+    width: 50rem; }
     @media screen and (max-width: 767px) {
       .c-header__logo {
         font-size: 4rem;
@@ -702,3 +726,101 @@ body {
     height: 4px;
     background: currentColor;
     box-shadow: 0 6px 0, 6px 6px 0, 12px 6px 0, 6px 12px 0, 12px 12px 0, 6px 0 0, 12px 0 0, 0 12px 0; }
+
+.search-box {
+  display: none; }
+  @media screen and (max-width: 992px) {
+    .search-box {
+      display: block;
+      width: 100%;
+      height: 5rem;
+      display: flex;
+      align-items: center;
+      padding: 3px 26px;
+      border-top: 1px solid #6666;
+      border-bottom: 1px solid #6666;
+      margin-bottom: 2rem; }
+      .search-box-ipt {
+        width: 90%;
+        height: 100%;
+        border: none;
+        background-color: #f5f5f5;
+        font-size: 1.5rem;
+        padding: 0 0 0 0.8rem;
+        z-index: 10;
+        outline: none; }
+      .search-box-icon {
+        background: #f5f5f5;
+        width: 10%;
+        line-height: 4rem;
+        height: 100%;
+        text-align: center; } }
+
+.heading {
+  padding: 4rem 0;
+  text-align: center; }
+  .heading__site {
+    font-size: 5.8rem;
+    font-weight: 300;
+    position: relative;
+    padding: 3rem 0; }
+    @media screen and (max-width: 992px) {
+      .heading__site {
+        font-size: 4rem; } }
+    .heading__site a {
+      text-decoration: none;
+      color: #333333; }
+      .heading__site a::before {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 60px;
+        height: 1px;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background: #323232; }
+
+.app {
+  overflow: hidden; }
+
+.s-product__switch {
+  text-decoration: none;
+  display: block;
+  position: relative; }
+  .s-product__switch img {
+    width: 100%; }
+    .s-product__switch img:last-of-type {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+      -moz-transition: opacity 0.5s ease-in-out;
+      -webkit-transition: opacity 0.5s ease-in-out; }
+  .s-product__switch:hover img:last-of-type {
+    opacity: 0; }
+
+.s-product__box {
+  padding: 3rem 0; }
+
+.s-product__name {
+  font-size: 3rem;
+  font-weight: 100;
+  cursor: pointer; }
+  .s-product__name a {
+    text-decoration: none;
+    color: #000; }
+
+.s-product__price {
+  display: flex;
+  padding: 2rem 0;
+  font-size: 2.2rem;
+  font-weight: 100;
+  color: #666666; }
+  .s-product__price--new {
+    margin-right: 2rem;
+    color: red; }
+  .s-product__price--old {
+    text-decoration: line-through; }
