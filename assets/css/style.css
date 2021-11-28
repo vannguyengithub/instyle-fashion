@@ -827,6 +827,18 @@ body {
   .s-product__price--old {
     text-decoration: line-through; }
 
+@media (min-width: 767px) and (max-width: 1023px) {
+  [type="button"].slick-prev {
+    display: none; }
+  [type="button"].slick-next {
+    display: none; } }
+
+@media screen and (max-width: 767px) {
+  [type="button"].slick-prev {
+    display: none; }
+  [type="button"].slick-next {
+    display: none; } }
+
 .s-banner {
   background-image: url(../../assets/img/background_banner.jpg);
   background-position: center;
@@ -918,3 +930,64 @@ body {
   .s-services__box:hover .s-services__img {
     opacity: 0.4;
     transition: all .4s; }
+
+@media screen and (max-width: 767px) {
+  .s-fashion__box1 {
+    padding: 0 10px; } }
+
+.s-fashion__img {
+  width: 100%;
+  padding-bottom: 4rem; }
+  @media screen and (max-width: 767px) {
+    .s-fashion__img {
+      padding-bottom: 1rem; } }
+
+.s-fashion__link {
+  position: relative;
+  color: #666666;
+  text-decoration: none;
+  outline: none;
+  display: block;
+  transition: opacity 150ms linear, color 150ms linear, background 150ms linear; }
+  .s-fashion__link::after {
+    background: rgba(0, 0, 0, 0.1) repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 1; }
+  .s-fashion__link:hover {
+    color: #000000;
+    outline: none; }
+    .s-fashion__link:hover::after {
+      transform: scale(1);
+      transition-duration: 1s;
+      opacity: 0; }
+  .s-fashion__link img {
+    width: 100%; }
+
+.s-fashion__wrap {
+  display: flex;
+  justify-content: space-between; }
+  .s-fashion__wrap__item {
+    width: 45%; }
+
+.s-fashion__box {
+  padding-bottom: 4rem; }
+  @media screen and (max-width: 767px) {
+    .s-fashion__box {
+      padding-bottom: 1rem; } }
+
+@media screen and (max-width: 767px) {
+  .inner1 {
+    display: flex; } }
+
+@media screen and (max-width: 767px) {
+  .inner2 {
+    padding: 0 13px; } }

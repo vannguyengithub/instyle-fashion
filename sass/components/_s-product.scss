@@ -58,3 +58,19 @@
         }
     }
 }
+@include tb {
+    [type="button"].slick-prev {
+        display: none;
+    }
+    [type="button"].slick-next {
+        display: none;
+    }
+}
+@include sp {
+    [type="button"].slick-prev {
+        display: none;
+    }
+    [type="button"].slick-next {
+        display: none;
+    }
+}
