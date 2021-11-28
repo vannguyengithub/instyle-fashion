@@ -787,45 +787,44 @@ body {
 .app {
   overflow: hidden; }
 
-.s-product__switch {
-  text-decoration: none;
-  display: block;
-  position: relative; }
-  .s-product__switch img {
-    width: 100%; }
-    .s-product__switch img:last-of-type {
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 1;
-      transition: opacity 0.5s ease-in-out;
-      -moz-transition: opacity 0.5s ease-in-out;
-      -webkit-transition: opacity 0.5s ease-in-out; }
-  .s-product__switch:hover img:last-of-type {
-    opacity: 0; }
-
-.s-product__box {
-  padding: 3rem 0; }
-
-.s-product__name {
-  font-size: 3rem;
-  font-weight: 100;
-  cursor: pointer; }
-  .s-product__name a {
+.s-product {
+  padding: 0 10px; }
+  .s-product__switch {
     text-decoration: none;
-    color: #000; }
-
-.s-product__price {
-  display: flex;
-  padding: 2rem 0;
-  font-size: 2.2rem;
-  font-weight: 100;
-  color: #666666; }
-  .s-product__price--new {
-    margin-right: 2rem;
-    color: #f94c43; }
-  .s-product__price--old {
-    text-decoration: line-through; }
+    display: block;
+    position: relative; }
+    .s-product__switch img {
+      width: 100%; }
+      .s-product__switch img:last-of-type {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+        -moz-transition: opacity 0.5s ease-in-out;
+        -webkit-transition: opacity 0.5s ease-in-out; }
+    .s-product__switch:hover img:last-of-type {
+      opacity: 0; }
+  .s-product__box {
+    padding: 3rem 0; }
+  .s-product__name {
+    font-size: 3rem;
+    font-weight: 100;
+    cursor: pointer; }
+    .s-product__name a {
+      text-decoration: none;
+      color: #000; }
+  .s-product__price {
+    display: flex;
+    padding: 2rem 0;
+    font-size: 2.2rem;
+    font-weight: 100;
+    color: #666666; }
+    .s-product__price--new {
+      margin-right: 2rem;
+      color: #f94c43; }
+    .s-product__price--old {
+      text-decoration: line-through; }
 
 @media (min-width: 767px) and (max-width: 1023px) {
   [type="button"].slick-prev {
